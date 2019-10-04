@@ -22,5 +22,8 @@ exports.logout = function(req, res) {
         res.redirect('/');
  
     });
+exports.home = function(req, res) {
+    res.render("home");
+}
  
 }
