@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 app.use(session({ secret: "crazy rabbit", resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
+require("./config/passport/passport")(passport);
 
 //Routes
 require('./routes/auth.js')(app, passport);

@@ -1,0 +1,28 @@
+<div id="home">
+  <div id='loginDiv' class='container rounded shadow'>
+
+<h4>Log In</h4>
+
+<div>
+<form method="POST" action="/login">
+  <div class="form-group">
+    <label for="userName">UserName:</label>
+    <input type="input" class="form-control" id="userNameLogIn" name="username" placeholder="Enter username">
+  </div>
+  <div class="form-group">
+    <label for="userPassword">Password:</label>
+    <input type="password" class="form-control" id="userLoginPassword" name="password" placeholder="Password">
+  </div>
+     <input class="btn btn-primary" type="submit" value="Login" />
+            </form>
+            <div id="loginA">
+                <a href="/dashboard">
+
+<a href="/signup"><p>Don't have an account? Sign up here.</p></a>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>

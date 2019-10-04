@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <title>Passport with Sequelize</title>
-</head>
- 
-<body>
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
- 
-</body>
- 
-</html>
+<div id="home">
+  <div id='backgroundWrapper'>
+  <div id='dashBoard' class='container rounded shadow'>
+    <div id='sideBar'>
+      <h4 class='h4 text-center'>Search for your favorite book!</h4>
+      <input id='userSearch' />
+      <div id='searchCats' class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+          <input type="radio" name="options" id="authorCheckBox" data-searchName='author' autocomplete="off" checked> Author
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="titleCheckBox" data-searchName='title' autocomplete="off"> Title
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="isbnCheckBox" data-searchName='isbn' autocomplete="off"> ISBN
+        </label>
+        <label class="btn btn-secondary">
+          <input type="radio" name="options" id="genreCheckBox" data-searchName='genre' autocomplete="off"> Genre
+        </label>
+      </div>
+      <button id='searchBtn' type="button" class='btn btn-primary'>Search</button>
+    </div>
+    
+    <div id='content'>
+      <div>
+        <div id='userTitle' class='text-center'>
+          <h3 class='h3'>Welcome {{userName}}</h3>
+        </div>
+      </div>
+        <div>
+          <div id='bookContainer' class='rounded'>
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+<script src="/js/dashboard.js"></script>
+
+

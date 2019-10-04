@@ -23,10 +23,10 @@ module.exports = function(passport, user) {
     });
   });
   passport.use(
-    "local-signin",
+    "local-login",
     new LocalStrategy(
       {
-        emailField: "email",
+        usernameField: "email",
         passwordField: "password",
         passReqToCallback: true
       },
@@ -57,7 +57,7 @@ module.exports = function(passport, user) {
           .catch(function(err) {
             console.log("Error:", err);
             return done(null, false, {
-              message: "Something went wrong with your Signup"
+              message: "Something went wrong with your login"
             });
           });
       }
