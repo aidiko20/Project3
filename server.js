@@ -27,6 +27,9 @@ require("./config/passport/passport")(passport);
 
 //Routes
 require('./routes/auth.js')(app, passport);
+app.get('/', function(req, res){
+    res.sendFile(__dirname +'/public/index.html'); // change the path to your index.html
+});
 //Models
 var models = require("./models");
  
